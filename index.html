@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2L SESI Djalma Piata - Quiz de TI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="school-info">
+                <h1>2L SESI Djalma Piata</h1>
+                <h2>Quiz Interativo de Tecnologia</h2>
+            </div>
+            <div class="logo">
+                <div class="logo-circle">2L</div>
+            </div>
+        </header>
+
+        <main>
+            <!-- Tela de Boas-Vindas -->
+            <section id="welcome-screen" class="screen active">
+                <div class="welcome-content">
+                    <div class="welcome-header">
+                        <h1>Bem-vindo ao Quiz de TI!</h1>
+                        <p>Teste seus conhecimentos em tecnologia</p>
+                    </div>
+                    
+                    <div class="levels-info">
+                        <div class="level-card">
+                            <div class="level-icon easy">🟢</div>
+                            <h3>Fácil</h3>
+                            <p>Conceitos básicos de informática</p>
+                        </div>
+                        <div class="level-card">
+                            <div class="level-icon medium">🟡</div>
+                            <h3>Médio</h3>
+                            <p>Conhecimentos intermediários</p>
+                        </div>
+                        <div class="level-card">
+                            <div class="level-icon hard">🔴</div>
+                            <h3>Difícil</h3>
+                            <p>Desafios avançados de TI</p>
+                        </div>
+                    </div>
+
+                    <div class="player-info">
+                        <label for="player-name">Seu nome:</label>
+                        <input type="text" id="player-name" placeholder="Digite seu nome" maxlength="20">
+                    </div>
+
+                    <button id="start-btn" class="btn-primary">Iniciar Quiz</button>
+
+                    <div class="instructions">
+                        <h4>Como jogar:</h4>
+                        <ul>
+                            <li>✅ Responda perguntas de múltipla escolha</li>
+                            <li>🎯 Acumule pontos por respostas corretas</li>
+                            <li>📊 Veja seu resultado ao final</li>
+                            <li>🔄 Jogue quantas vezes quiser!</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Tela do Quiz -->
+            <section id="quiz-screen" class="screen">
+                <div class="quiz-header">
+                    <div class="quiz-info">
+                        <span id="player-display">Jogador: Anônimo</span>
+                        <span id="score">Pontuação: 0</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div id="progress" class="progress-fill"></div>
+                    </div>
+                </div>
+
+                <div class="question-container">
+                    <div id="level-indicator" class="level-indicator">
+                        <span id="current-level">FÁCIL</span>
+                    </div>
+                    
+                    <h2 id="question-text">Pergunta aparecerá aqui</h2>
+                    
+                    <div id="options-container" class="options-container">
+                        <!-- Opções serão inseridas via JavaScript -->
+                    </div>
+
+                    <div class="quiz-controls">
+                        <button id="next-btn" class="btn-secondary" disabled>Próxima Pergunta</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Tela de Resultados -->
+            <section id="results-screen" class="screen">
+                <div class="results-content">
+                    <h1>Quiz Concluído! 🎉</h1>
+                    
+                    <div class="result-card">
+                        <div class="result-header">
+                            <h2 id="result-player">Jogador</h2>
+                            <div id="result-badge" class="result-badge"></div>
+                        </div>
+                        
+                        <div class="score-display">
+                            <div class="score-circle">
+                                <span id="final-score">0</span>
+                                <span>/</span>
+                                <span id="total-questions">0</span>
+                            </div>
+                            <div id="percentage" class="percentage">0%</div>
+                        </div>
+
+                        <div class="result-message">
+                            <p id="result-message-text">Mensagem do resultado</p>
+                        </div>
+                    </div>
+
+                    <div class="results-actions">
+                        <button id="restart-btn" class="btn-primary">Jogar Novamente</button>
+                        <button id="home-btn" class="btn-secondary">Voltar ao Início</button>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>Desenvolvido para 2L SESI Djalma Piata - 2024</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
